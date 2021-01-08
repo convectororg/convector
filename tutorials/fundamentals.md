@@ -16,7 +16,7 @@ By using the built-in storages and adapters, most of the basics are covered. For
 
 ## Convector Core
 
-All the `@worldsibu/convector-core-*` packages. It provides all the necessary code to write contract specifications using the *Model/Controller* pattern.
+All the `@convector/convector-core-*` packages. It provides all the necessary code to write contract specifications using the *Model/Controller* pattern.
 
 ### Convector Storage
 
@@ -32,7 +32,7 @@ Following the modular design pattern from models, controllers have **adapters**,
 
 ## Convector Tools
 
-All the `@worldsibu/convector-tool-*` packages. They provide a set of helpers and utils to make the chaincode development easier.
+All the `@convector/convector-tool-*` packages. They provide a set of helpers and utils to make the chaincode development easier.
 
 ### Chaincode Manager
 
@@ -48,10 +48,10 @@ A typical distribution and usage of the components goes as follow (asumming you 
 
 | Project/Layer | Why | Command |
 | --- | --- | --- |
-| Root of your project | To have a dev env and the utility that will let you install, upgrade, invoke and so on, the chaincodes. | `npm install -D @worldsibu/convector-tool-{dev-env,chaincode-manager}` |
-| Root chaincode project. E.g.: chaincodes/ | So that you can share settings between your multiple chaincodes, such as development environment, tests and testing scripts, blockchain installation setup (what to install, where), etc. | `npm install -D @worldsibu/convector-{adapter-mock,tool-{dev-env,chaincode-manager}} chai mocha @types/chai @types/mocha ts-node` |
-| At for each of your chaincode projects. E.g.: chaincodes/cc-token | Each chaincode can be a separate project so that you don't have to carry everything when including in another layer of your stack. |  `npm install -SE @worldsibu/convector-core-{model,controller} && npm i -S yup reflect-metadata && npm i -D @types/yup` |
-| At your backend / api | It typically calls the nodes (peers) of your blockchain, but it may call the World State or other services as well. |  Include each of your chaincode projects, they will carry the basic dependencies `npm install -SE @worldsibu/convector-{adapter-fabric,storage-couchdb} @types/bytebuffer` |
+| Root of your project | To have a dev env and the utility that will let you install, upgrade, invoke and so on, the chaincodes. | `npm install -D @convector/convector-tool-{dev-env,chaincode-manager}` |
+| Root chaincode project. E.g.: chaincodes/ | So that you can share settings between your multiple chaincodes, such as development environment, tests and testing scripts, blockchain installation setup (what to install, where), etc. | `npm install -D @convector/convector-{adapter-mock,tool-{dev-env,chaincode-manager}} chai mocha @types/chai @types/mocha ts-node` |
+| At for each of your chaincode projects. E.g.: chaincodes/cc-token | Each chaincode can be a separate project so that you don't have to carry everything when including in another layer of your stack. |  `npm install -SE @convector/convector-core-{model,controller} && npm i -S yup reflect-metadata && npm i -D @types/yup` |
+| At your backend / api | It typically calls the nodes (peers) of your blockchain, but it may call the World State or other services as well. |  Include each of your chaincode projects, they will carry the basic dependencies `npm install -SE @convector/convector-{adapter-fabric,storage-couchdb} @types/bytebuffer` |
 | At the front end | Here you may be calling your backend/api server, it is great to have the interfaces and structures coming right from the chaincodes layer so that you don't have to copy everything. |  Include each of your chaincode projects, they will carry the basic dependencies. |
 
 ---
@@ -70,5 +70,5 @@ A typical distribution and usage of the components goes as follow (asumming you 
 
 * [[Getting-Started]]
 * [Dev resources in our blog](https://medium.com/worldsibu/for-devs/home)
-* [A fullstack TypeScript project showcasing Convector](https://github.com/worldsibu/convector-example-drug-supply-chain)
-* [A bootstrap project for you](https://github.com/worldsibu/convector-boilerplate)
+* [A fullstack TypeScript project showcasing Convector](https://github.com/convectororg/convector-example-drug-supply-chain)
+* [A bootstrap project for you](https://github.com/convectororg/convector-boilerplate)

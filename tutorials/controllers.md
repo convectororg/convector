@@ -3,13 +3,13 @@
 We define controllers as the business logic applied to models.
 Every possible action over a model, should be configured thought controllers.
 
-The package `@worldsibu/convector-core-controller` contains the necessary code to create controllers. Here's an example of one:
+The package `@convector/convector-core-controller` contains the necessary code to create controllers. Here's an example of one:
 
 ```typescript
 import * as yup from 'yup';
 import {
   Controller, ConvectorController, Invokable, Param
-} from '@worldsibu/convector-core-controller';
+} from '@convector/convector-core-controller';
 
 @Controller('test-controller')
 export class TestController extends ConvectorController {
@@ -30,7 +30,7 @@ Finally, the `@Param` decorator parses the arguments coming in the transactions 
 
 ## Usage
 
-To simply create a base controller file through <a href="https://github.com/worldsibu/convector-cli" target="_blank">Convector CLI</a> run.
+To simply create a base controller file through <a href="https://github.com/convectororg/convector-cli" target="_blank">Convector CLI</a> run.
 
 ```bash
 conv generate controller <NAME-OF-CONTROLLER>

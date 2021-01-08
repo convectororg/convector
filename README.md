@@ -10,14 +10,14 @@ The Convector Suite main components are:
 
 * <a href="https://covalentx.com/convector/convector-smart-contracts?ref=github" target="_blank">Convector Smart Contracts</a> - JavaScript-based Development Framework for Enterprise Smart Contract Systems
 * <a href="https://covalentx.com/convector/hurley-development-environment?ref=github" target="_blank">Hurley</a> - the easiest way to quickly setup your Hyperledger development environment. Instead of learning all the config files required and navigating tons of yaml files, just do `hurl new` and focus on your smart contract.
-* <a href="https://github.com/worldsibu/convector-cli" target="_blank">Convector CLI</a> - the fastest and easiest way to build a new Convector Smart Contracts project. It is fully integrated with Hurley as well.
-* <a href="https://github.com/worldsibu/convector-rest-api" target="_blank">Convector REST Server</a> - a RESTful API generator from a Convector smart contract. One command and you can expose your smart contract to the world.
+* <a href="https://github.com/convectororg/convector-cli" target="_blank">Convector CLI</a> - the fastest and easiest way to build a new Convector Smart Contracts project. It is fully integrated with Hurley as well.
+* <a href="https://github.com/convectororg/convector-rest-api" target="_blank">Convector REST Server</a> - a RESTful API generator from a Convector smart contract. One command and you can expose your smart contract to the world.
 
 ## Some key links:
 
 * [Official Documentation site](https://docs.covalentx.com/convector).
 * [Official tutorial for begginers](https://docs.covalentx.com/article/99-tutorial-getting-started)
-* [Github code examples](https://github.com/worldsibu) and [Code examples directory](https://docs.covalentx.com/article/73-code-samples)
+* [Github code examples](https://github.com/convectororg) and [Code examples directory](https://docs.covalentx.com/article/73-code-samples)
 * [Video tutorials](https://www.youtube.com/watch?v=BmVNMR-O_os&list=PL-1Vd1bTiSr_i2qeqeHCUWaD74ymRvidb)
 
 Have doubts, want to collaborate or just meet other Convector devs around the world? <a href="https://discord.gg/twRwpWt" target="_blank">
@@ -26,9 +26,9 @@ Have doubts, want to collaborate or just meet other Convector devs around the wo
 
 ## What is Convector Smart Contracts?
 
-[![Issues](https://img.shields.io/github/issues-raw/@worldsibu/convector.svg)](https://github.com/hyperledger-labs/convector/issues)
+[![Issues](https://img.shields.io/github/issues-raw/@convectororg/convector.svg)](https://github.com/hyperledger-labs/convector/issues)
 [![Newsletter](https://img.shields.io/badge/Newsletter--orange.svg)](https://covalentx.com/subscribe/)
-[![npm](https://img.shields.io/npm/v/@worldsibu/convector-core-chaincode.svg)](https://www.npmjs.com/package/@worldsibu/convector-core-chaincode)
+[![npm](https://img.shields.io/npm/v/@convector/convector-core-chaincode.svg)](https://www.npmjs.com/package/@convector/convector-core-chaincode)
 [![Discord](https://img.shields.io/discord/469152206638284800.svg)](https://discord.gg/twRwpWt)
 
 [![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
@@ -46,7 +46,7 @@ For now, we only support **Hyperledger Fabric**, so this documentation is for us
 > Make sure you meet the [pre-requisites](https://docs.covalentx.com/article/71-getting-started#prerequisites).
 
 ```
-npm i -g @worldsibu/convector-cli
+npm i -g @convector/convector-cli
 conv new car
 cd car
 npm install
@@ -63,7 +63,7 @@ hurl invoke car car_create '{"id":"car1","name":"jetta", "created":1,"modified":
 # See your new record created in the blockchain by visiting: http://localhost:5084/_utils/#database/ch1_car/_all_docs
 ```
 
-Then, you can visit the [official Docs Site](https://docs.covalentx.com/convector), [automatically add a REST API](https://github.com/worldsibu/convector-rest-api), or build it and [deploy it to an enterprise blockchain network](https://docs.covalentx.com/forma/tutorial).
+Then, you can visit the [official Docs Site](https://docs.covalentx.com/convector), [automatically add a REST API](https://github.com/convectororg/convector-rest-api), or build it and [deploy it to an enterprise blockchain network](https://docs.covalentx.com/forma/tutorial).
 
 ## Assumptions
 

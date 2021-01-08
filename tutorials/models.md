@@ -3,13 +3,13 @@
 We define models as assets you interact with in a blockchain
 Every data structure should be a model, since it defines what are the minimum necessary properties to be present.
 
-The package `@worldsibu/convector-core-model` contains the necessary code to create models. Here's an example of one:
+The package `@convector/convector-core-model` contains the necessary code to create models. Here's an example of one:
 
 ```typescript
 import * as yup from 'yup';
 import {
   ConvectorModel, ReadOnly, Required, Validate
-} from '@worldsibu/convector-core-model';
+} from '@convector/convector-core-model';
 
 export class ExampleModel extends ConvectorModel<ExampleModel> {
   @ReadOnly()
@@ -38,7 +38,7 @@ There are multiple decorators you can use to model the data:
 
 ## Usage
 
-To simply create a base model file through <a href="https://github.com/worldsibu/convector-cli" target="_blank">Convector CLI</a> run.
+To simply create a base model file through <a href="https://github.com/convectororg/convector-cli" target="_blank">Convector CLI</a> run.
 
 ```bash
 conv generate model <NAME-OF-MODEL>

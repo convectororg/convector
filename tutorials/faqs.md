@@ -1,6 +1,6 @@
 # Chaincode Manager
 
-We have a tool to package and deploy chaincodes generated with convector. Once you install [@worldsibu/convector-tool-chaincode-manager](https://www.npmjs.com/package/@worldsibu/convector-tool-chaincode-manager) installed you will have the `chaincode-manager` commands available in your `.bin` folder inside the `node_modules`.
+We have a tool to package and deploy chaincodes generated with convector. Once you install [@convector/convector-tool-chaincode-manager](https://www.npmjs.com/package/@convector/convector-tool-chaincode-manager) installed you will have the `chaincode-manager` commands available in your `.bin` folder inside the `node_modules`.
 
 ## Package
 
@@ -26,11 +26,11 @@ The configuration file `./chaincode.config.json` is expected to have a couple of
     // the name and version, along with the exported class in the `main` file
     // declared in the package.json
     {
-      "name": "@worldsibu/test-1",
+      "name": "@convector/test-1",
       "version": "1.0.0",
       "controller": "Test1Controller"
     }, {
-      "name": "@worldsibu/test-2",
+      "name": "@convector/test-2",
       // You can provide a path to a local npm package if you want, it will be copied
       "version": "file:./some/local/path",
       "controller": "Test2Controller"

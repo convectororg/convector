@@ -6,8 +6,8 @@ import * as uuid from 'uuid/v4';
 import 'mocha';
 import * as chaiAsPromised from 'chai-as-promised';
 
-import { MockControllerAdapter } from '@worldsibu/convector-adapter-mock';
-import { ClientFactory, ConvectorControllerClient } from '@worldsibu/convector-core';
+import { MockControllerAdapter } from '@convector/convector-adapter-mock';
+import { ClientFactory, ConvectorControllerClient } from '@convector/convector-core';
 
 import { TokenController } from '../src/token.controller';
 import { Token, CompanyToken, Element } from '../src/token.model';

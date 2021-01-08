@@ -2,7 +2,7 @@
 
 We have found that Linux users are facing some common difficulties and extra steps they have to go through. 
 
-This document is the result of the community feedback in our <a href="https://github.com/worldsibu" target="_blank">repos</a> and <a href="https://discord.gg/twRwpWt" target="_blank"><i class="fab fa-discord"></i> Discord chat</a>.
+This document is the result of the community feedback in our <a href="https://github.com/convectororg" target="_blank">repos</a> and <a href="https://discord.gg/twRwpWt" target="_blank"><i class="fab fa-discord"></i> Discord chat</a>.
 
 ## Docker Compose
 
@@ -35,12 +35,12 @@ Follow: https://github.com/nodejs/node-gyp#on-unix
 Node Gyp permissions issue.
 
 ```bash
-gyp ERR! stack Error: EACCES: permission denied, mkdir '/usr/lib/node_modules/@worldsibu/hurley/node_modules/pkcs11js/.node-gyp'
+gyp ERR! stack Error: EACCES: permission denied, mkdir '/usr/lib/node_modules/@convector/hurley/node_modules/pkcs11js/.node-gyp'
 ```
 
 ### Fix
 
-https://github.com/worldsibu/hurley/issues/6
+https://github.com/convectororg/hurley/issues/6
 
 ## Script commands incompability
 

@@ -1,4 +1,4 @@
-/** @module @worldsibu/convector-examples-token */
+/** @module @convector/convector-examples-token */
 
 import * as yup from 'yup';
 import {
@@ -8,7 +8,7 @@ import {
   Validate,
   FlatConvectorModel,
   Default
-} from '@worldsibu/convector-core';
+} from '@convector/convector-core';
 
 export class Complex extends ConvectorModel<Complex> {
   @ReadOnly()

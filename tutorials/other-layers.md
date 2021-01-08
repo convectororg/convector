@@ -61,4 +61,4 @@ As you can see, it's rather easy to integrate Convector to other TypeScript/Java
 
 ## What's next
 
-Want to see an out of the box project working? Take a look at the [Drug Supply Example](https://github.com/worldsibu/convector-example-drug-supply-chain).
+Want to see an out of the box project working? Take a look at the [Drug Supply Example](https://github.com/convectororg/convector-example-drug-supply-chain).

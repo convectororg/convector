@@ -6,12 +6,12 @@ You can then include the Convector components into your projects depending on th
 
 
 
-[If you want to see this project distribution in action see this project! It is also a easy way for you to start a new project](https://github.com/worldsibu/convector-example-drug-supply-chain)
+[If you want to see this project distribution in action see this project! It is also a easy way for you to start a new project](https://github.com/convectororg/convector-example-drug-supply-chain)
 
 
 ## More
 
-* [Want to see how to create a ERC-20 compatible token on a permissioned blockchain?](https://github.com/worldsibu/convector-example-token)
-* [Creating a project from scratch with Convector](https://github.com/worldsibu/convector-example-marketplace)
-* [Creating a fullstack-project from scratch with Convector](https://github.com/worldsibu/convector-example-drug-supply-chain)
-* About the creators: [WorldSibu](https://worldsibu.io)
+* [Want to see how to create a ERC-20 compatible token on a permissioned blockchain?](https://github.com/convectororg/convector-example-token)
+* [Creating a project from scratch with Convector](https://github.com/convectororg/convector-example-marketplace)
+* [Creating a fullstack-project from scratch with Convector](https://github.com/convectororg/convector-example-drug-supply-chain)
+* About the creators: [WorldSibu](https://covalentx.com)

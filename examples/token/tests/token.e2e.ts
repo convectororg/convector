@@ -5,9 +5,9 @@ import { resolve } from 'path';
 import * as uuid from 'uuid/v4';
 import 'mocha';
 
-import { CouchDBStorage } from '@worldsibu/convector-storage-couchdb';
-import { FabricControllerAdapter, ClientHelper } from '@worldsibu/convector-platform-fabric';
-import { BaseStorage, ClientFactory, ConvectorControllerClient } from '@worldsibu/convector-core';
+import { CouchDBStorage } from '@convector/convector-storage-couchdb';
+import { FabricControllerAdapter, ClientHelper } from '@convector/convector-platform-fabric';
+import { BaseStorage, ClientFactory, ConvectorControllerClient } from '@convector/convector-core';
 
 import { Token } from '../src/token.model';
 import { TokenController } from '../src/token.controller';

@@ -7,12 +7,12 @@
 
 ## Using Convector CLI
 
-Since <a href="https://github.com/worldsibu/convector-cli" target="_blank">Convector CLI</a> was released, we recommend using it to provision your Chaincode projects. It makes it easier, faster, and less prone to errors.
+Since <a href="https://github.com/convectororg/convector-cli" target="_blank">Convector CLI</a> was released, we recommend using it to provision your Chaincode projects. It makes it easier, faster, and less prone to errors.
 
 To start a new chaincode project follow these steps.
  
 ```bash
-npm i -g @worldsibu/convector-cli
+npm i -g @convector/convector-cli
 
 # Create a new project with a default chaincode package
 conv new PROJECT-NAME -c CHAINCODE-NAME
@@ -35,7 +35,7 @@ npm run cc:upgrade -- CHAINCODE-NAME 2
 
 ## Doing things manually
 
-<a href="https://github.com/worldsibu/convector-cli" target="_blank">Convector CLI</a> has been recently released to the public. It makes it even easier to onboard Convector, but if you still want to things manually, you can follow this instructive.
+<a href="https://github.com/convectororg/convector-cli" target="_blank">Convector CLI</a> has been recently released to the public. It makes it even easier to onboard Convector, but if you still want to things manually, you can follow this instructive.
 
 ### In your NodeJS project
 
@@ -67,7 +67,7 @@ There you will put all of your chaincode's code. Start a new npm project inside 
 Add some basic dependencies so you can get started:
 
 ```bash
-npm install -SE @worldsibu/convector-core-{model,controller} && npm i -SE reflect-metadata yup
+npm install -SE @convector/convector-core-{model,controller} && npm i -SE reflect-metadata yup
 ```
 
 ## Folder Structure
@@ -97,7 +97,7 @@ import {
   ConvectorController,
   Invokable,
   Param
-} from '@worldsibu/convector-core-controller';
+} from '@convector/convector-core-controller';
 
 import { Test } from './test.model';
 
@@ -123,7 +123,7 @@ import {
   ReadOnly,
   Required,
   Validate
-} from '@worldsibu/convector-core-model';
+} from '@convector/convector-core-model';
 
 export class Test extends ConvectorModel<Test> {
   @ReadOnly()
@@ -158,18 +158,18 @@ During development you *don't* really need a blockchain. The logic you put in yo
 When you're ready to test on a real chaincode, you can add our Convector Tools. `dev-env` will create a *development* blockchain in your computer. **Make sure to do it at the root project folder, not inside `./packages/<chaincode-name>`**.
 
 ```bash
-npm install -D @worldsibu/convector-{adapter-mock,tool-{dev-env,chaincode-manager}} fabric-client@1.1.2 fabric-ca-client@1.1.2
+npm install -D @convector/convector-{adapter-mock,tool-{dev-env,chaincode-manager}} fabric-client@1.1.2 fabric-ca-client@1.1.2
 ```
 
-This Convector Tool setups a development environment for you to easily run the chaincodes. All the following scripts can be invoked from the path `./node_modules/@worldsibu/convector-tool-dev-env/scripts/*`:
+This Convector Tool setups a development environment for you to easily run the chaincodes. All the following scripts can be invoked from the path `./node_modules/@convector/convector-tool-dev-env/scripts/*`:
 
 To make it easier for you, add in your **root** `package.json` the following scripts. **Make sure to do it at the root project folder, NOT inside `./packages/<chaincode-name>/package.json`**.
 
 ```json
 {
   "scripts":{
-    "env:restart": "./node_modules/@worldsibu/convector-tool-dev-env/scripts/restart.sh",
-    "env:clean": "./node_modules/@worldsibu/convector-tool-dev-env/scripts/clean.sh"
+    "env:restart": "./node_modules/@convector/convector-tool-dev-env/scripts/restart.sh",
+    "env:clean": "./node_modules/@convector/convector-tool-dev-env/scripts/clean.sh"
   }
 }
 ```
@@ -197,6 +197,6 @@ By using the chaincode manager you can install and upgrade chaincodes in the blo
 
 * [[Fundamentals]].
 * [Dev resources in our blog](https://medium.com/worldsibu/for-devs/home).
-* Take a look at <a href="https://github.com/worldsibu/convector-cli" target="_blank">Convector CLI</a>.
-* [A fullstack TypeScript project showcasing Convector](https://github.com/worldsibu/convector-example-drug-supply-chain).
-* [A bootstrap project for you](https://github.com/worldsibu/convector-boilerplate).
+* Take a look at <a href="https://github.com/convectororg/convector-cli" target="_blank">Convector CLI</a>.
+* [A fullstack TypeScript project showcasing Convector](https://github.com/convectororg/convector-example-drug-supply-chain).
+* [A bootstrap project for you](https://github.com/convectororg/convector-boilerplate).

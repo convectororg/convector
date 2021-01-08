@@ -14,9 +14,9 @@ In some cases, the rol of Oracles is needed, what these special participants do 
 
 ## Tip 2: debugging and testing
 
-Unit testing is a best practice in modern software development. Blockchain with Convector is not an exception. You can use the built in Mock Controller Adapter `@worldsibu/convector-adapter-mock` to simulate that your code is executed in the blockchain.
+Unit testing is a best practice in modern software development. Blockchain with Convector is not an exception. You can use the built in Mock Controller Adapter `@convector/convector-adapter-mock` to simulate that your code is executed in the blockchain.
 
-You can find an easy example here: https://github.com/worldsibu/convector-example-drug-supply-chain/blob/master/%40worldsibu/chaincodes/cc-drug/tests/drug.spec.ts
+You can find an easy example here: https://github.com/convectororg/convector-example-drug-supply-chain/blob/master/%40convectororg/chaincodes/cc-drug/tests/drug.spec.ts
 
 Automate your tests and integrate them with your build processes for best results.
 
@@ -29,8 +29,8 @@ Users and admins are not created by Convector, unlike other frameworks Convector
 So the pattern that Convector follows is:
 
 1. Users and admins are created as regular users in the Fabric model, whether it's a CA or not
-2. You can then create a chaincode to register your users and make them "available" to reference from other smart contracts. I.e.: https://github.com/worldsibu/convector-example-drug-supply-chain/blob/master/%40worldsibu/chaincodes/cc-participant/src/participant.controller.ts
-3. Usually the pattern is to include `x509` -fingerprint in the chaincode. I.e.: https://github.com/worldsibu/convector-example-drug-supply-chain/blob/master/package.json#L26
+2. You can then create a chaincode to register your users and make them "available" to reference from other smart contracts. I.e.: https://github.com/convectororg/convector-example-drug-supply-chain/blob/master/%40convectororg/chaincodes/cc-participant/src/participant.controller.ts
+3. Usually the pattern is to include `x509` -fingerprint in the chaincode. I.e.: https://github.com/convectororg/convector-example-drug-supply-chain/blob/master/package.json#L26
 4. In your "business chaincode" (the one that is not for participants) you receive a tx, you get the `this.sender` and compare it against text fields that previously were set with a fingerprint of the expected user to do a task
 
-The full practical example can be found here: https://github.com/worldsibu/convector-example-drug-supply-chain
+The full practical example can be found here: https://github.com/convectororg/convector-example-drug-supply-chain

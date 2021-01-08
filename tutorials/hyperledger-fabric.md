@@ -16,7 +16,7 @@ A Hyperledger Fabric network is not more than some software componentes connecte
 
 Another relevant component is the **World State**. The World State is simply a no sql database usually with CouchDB. It is compiled out of the blockchain status, which means that even though you can edit its contents, anything will really be changed on the blockchain. Any simple change on the blockchain will regenerate it. It is link to an specific peer of the organization.
 
-For JavaScript chaincodes on Hyperledger Fabric, they are made up of config files referencing projects. So, it is usually a set of packages (with models and controllers inside) that are configured through a file typically called `...chaincode.config.json`. So that even if you have packages called something like "@worldsibu/convector-example-dsc-cc-drug", your chaincode can be installed with a simple name like "drug".
+For JavaScript chaincodes on Hyperledger Fabric, they are made up of config files referencing projects. So, it is usually a set of packages (with models and controllers inside) that are configured through a file typically called `...chaincode.config.json`. So that even if you have packages called something like "@convector/convector-example-dsc-cc-drug", your chaincode can be installed with a simple name like "drug".
 
 ------
 

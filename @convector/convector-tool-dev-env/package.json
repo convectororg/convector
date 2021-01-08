@@ -1,0 +1,69 @@
+{
+  "name": "@convector/convector-tool-dev-env",
+  "version": "1.3.8",
+  "description": "Development environment",
+  "main": "./dist/index.js",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hyperledger-labs/convector/tree/develop/%40convectororg/convector-tool-dev-env"
+  },
+  "keywords": [
+    "typescript",
+    "chaincode",
+    "blockchain",
+    "hyperledger",
+    "solutions",
+    "environment",
+    "hyperledger fabric",
+    "smart contract",
+    "run",
+    "hurley",
+    "composer"
+  ],
+  "homepage": "https://covalentx.com/convector/convector-smart-contracts/",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "bin/*",
+    "dist/*",
+    "config/*",
+    "scripts/*",
+    "examples/*",
+    "network-objects/*",
+    "docker-compose.yml"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "dev-env-start": "./scripts/start.sh",
+    "dev-env-stop": "./scripts/stop.sh",
+    "dev-env-init": "./scripts/init.sh",
+    "dev-env-clean": "./scripts/clean.sh",
+    "dev-env-restart": "./scripts/restart.sh",
+    "user-registry": "./dist/command.js"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc",
+    "prepare": "npm run build",
+    "lint": "tslint --fix -c '../../tslint.json' -p './tsconfig.json'"
+  },
+  "peerDependencies": {
+    "fabric-ca-client": ">=1.1.2",
+    "fabric-client": ">=1.1.2"
+  },
+  "dependencies": {
+    "@convector/convector-common-fabric-helper": "^1.3.8",
+    "commander": "^2.15.1",
+    "shelljs": "^0.8.2",
+    "tslib": "^1.9.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2",
+    "ts-node": "^6.0.3",
+    "tslint": "^5.9.1",
+    "typedoc": "^0.11.1",
+    "typescript": "2.8.3"
+  }
+}

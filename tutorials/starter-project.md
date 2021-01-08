@@ -1,6 +1,6 @@
 # A typical development lifecycle
 
-As said before, Convector doesn't require `Lerna` to run, but we highly recommend it. This starter project's source code can be found [here](https://github.com/worldsibu/convector-example-drug-supply-chain).
+As said before, Convector doesn't require `Lerna` to run, but we highly recommend it. This starter project's source code can be found [here](https://github.com/convectororg/convector-example-drug-supply-chain).
 
 We also like mono-repos, and even though they are not required here either, this examples works like that.
 
@@ -19,8 +19,8 @@ To create a smart contract system you need:
 
 * Your code. Containing your smart contracts.
   * It is usually made up of front end modules, backend or APIs, peers (nodes) which run the smart contracts.
-* A development environment (a fullblown test blockchain) created by the [Development-Environment](https://github.com/worldsibu/convector/blob/develop/tutorials/dev-env.md).
-* A set of tools to interact with the blockchain, such as [Chaincode-Manager](https://github.com/worldsibu/convector/blob/develop/tutorials/chaincode-manager.md).
+* A development environment (a fullblown test blockchain) created by the [Development-Environment](https://github.com/convectororg/convector/blob/develop/tutorials/dev-env.md).
+* A set of tools to interact with the blockchain, such as [Chaincode-Manager](https://github.com/convectororg/convector/blob/develop/tutorials/chaincode-manager.md).
 
 If you are working with a mono-repo like us, this scripts in your root `package.json` will make your life easier.
 
@@ -43,11 +43,11 @@ If you are working with a mono-repo like us, this scripts in your root `package.
     "lerna:test": "lerna exec npm run test",
     "lerna:lint": "lerna run lint",
     "================= Dev Env =================": "==================================",
-    "env:init": "./node_modules/@worldsibu/convector-tool-dev-env/scripts/init.sh",
-    "env:start": "./node_modules/@worldsibu/convector-tool-dev-env/scripts/start.sh",
-    "env:stop": "./node_modules/@worldsibu/convector-tool-dev-env/scripts/stop.sh",
-    "env:restart": "./node_modules/@worldsibu/convector-tool-dev-env/scripts/restart.sh",
-    "env:clean": "./node_modules/@worldsibu/convector-tool-dev-env/scripts/clean.sh",
+    "env:init": "./node_modules/@convector/convector-tool-dev-env/scripts/init.sh",
+    "env:start": "./node_modules/@convector/convector-tool-dev-env/scripts/start.sh",
+    "env:stop": "./node_modules/@convector/convector-tool-dev-env/scripts/stop.sh",
+    "env:restart": "./node_modules/@convector/convector-tool-dev-env/scripts/restart.sh",
+    "env:clean": "./node_modules/@convector/convector-tool-dev-env/scripts/clean.sh",
     "================= Chaincodes =================": "==================================",
     "cc:start": "f() { npm-run-all -s cc:package -p \"cc:install -- org1 $1\" \"cc:install -- org2 $1\" -s wait \"cc:instantiate -- $1\"; }; f",
     "cc:package": "chaincode-manager --config ./org1.chaincode.config.json --output ./chaincode package",
@@ -74,7 +74,7 @@ If seen closely, you get all those commands your lifecycle development will need
 2. Test it locally (we encourage to make unit testing through the mock adapter, since testing against the blockchain takes a lot of time due to the installation process).
 3. Deploy to the blockchain! Probably you haven't provisioned the blockchain yet, so you can run `npm run env:restart`.
 4. And install your chaincode `npm run cc:start 1.0`, it will call the previously seen tasks which uses each of the  `...chaincode.config.json` files (you need to generate one for each organization to install it on every participant). But before:
-5. Compile your chaincode project. Let's say your chaincode project is at 'root/@worldsibu/chaincodes/cc-drug' (like in the source code referenced to this project) so you would add these tasks at the `package.json`. Tasks to include: 
+5. Compile your chaincode project. Let's say your chaincode project is at 'root/@convector/chaincodes/cc-drug' (like in the source code referenced to this project) so you would add these tasks at the `package.json`. Tasks to include: 
 ```json 
 "client:generate": "generate-controller-interface -c DrugController",
 "------------ STANDARD TASKS ------------": "",
@@ -82,7 +82,7 @@ If seen closely, you get all those commands your lifecycle development will need
 "build": "npm run clean && npm run client:generate && tsc",
 "prepare": "npm run build" 
 ```
-6. Run `npm run build` at that folder, or if using lerna `lerna run build --scope @worldsibu/convector-example-dsc-cc-drug`.
+6. Run `npm run build` at that folder, or if using lerna `lerna run build --scope @convector/convector-example-dsc-cc-drug`.
 7. Be sure that each `...chaincode.config.json` file is configured correctly with the packages and references to your project and the name you like to give to your chaincode! 
 2. Proceed to run `npm run cc:start 1.0`.
 3. This installation task may take some time.
@@ -94,5 +94,5 @@ If seen closely, you get all those commands your lifecycle development will need
 8. Since we are using the official SDK from the Hyperledger Project, we need to provide a **Network Profile**. It is a simple JSON containing the setup of your network. After you started the blockchain in your computer with `npm run env:restart` a folder was automatically created with the name `.convector-dev-env` go and copy each file `.convector-dev-env/examples/org1.network-profile.yaml` and `.convector-dev-env/examples/org2.network-profile.yaml` those are examples of that network profile you need. Change the setting accordingly to your project and store them in an accesible path for the server. We like to copy them to a `/config` folder inside the server. Checkout the referenced source code to see it in action.
 9. That newly created folder `.convector-dev-env` will be referenced by a lot of files to access the certificates with which your servers and users will run. For example, as seen before, the network profile (which is used by the Fabric SDK needs them), the chaincode manager will also require them to access the admin credentials to install chaincodes and also de dev env which itself generated them.
 
-We recommend checking out this project to put every required component where needed [access code](https://github.com/worldsibu/convector-example-drug-supply-chain).
+We recommend checking out this project to put every required component where needed [access code](https://github.com/convectororg/convector-example-drug-supply-chain).
 

@@ -1,0 +1,59 @@
+{
+  "name": "@convector/convector-platform-fabric",
+  "version": "1.3.8",
+  "description": "Convector packages for fabric support",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hyperledger-labs/convector/tree/develop/%40convectororg/convector-platform-fabric"
+  },
+  "keywords": [
+    "typescript",
+    "chaincode",
+    "blockchain",
+    "hyperledger",
+    "solutions",
+    "environment",
+    "hyperledger fabric",
+    "smart contract",
+    "run",
+    "hurley",
+    "composer"
+  ],
+  "homepage": "https://covalentx.com/convector/convector-smart-contracts/",
+  "main": "./dist/src/index.js",
+  "typings": "./dist/src/index.d.ts",
+  "files": [
+    "dist/*"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "clean:docs": "rimraf docs",
+    "build": "npm run clean && tsc",
+    "prepare": "npm run build",
+    "lint": "tslint --fix -c '../../tslint.json' -p './tsconfig.json'",
+    "=test": "mocha -r ts-node/register tests/**/*.spec.ts --reporter spec",
+    "predocs:generate": "npm run clean:docs",
+    "docs:generate": "typedoc src --mode file --out docs --target ES6 --excludePrivate",
+    "docs:serve": "http-server docs"
+  },
+  "dependencies": {
+    "@convector/convector-adapter-fabric": "^1.3.8",
+    "@convector/convector-adapter-fabric-in-chaincode": "^1.3.8",
+    "@convector/convector-common-fabric-helper": "^1.3.8",
+    "@convector/convector-core-chaincode": "^1.3.8",
+    "@convector/convector-storage-stub": "^1.3.8",
+    "@convector/convector-tool-chaincode-manager": "^1.3.8",
+    "tslib": "^1.9.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2",
+    "ts-node": "^6.0.3",
+    "tslint": "^5.9.1",
+    "typedoc": "^0.11.1",
+    "typescript": "2.8.3"
+  }
+}

@@ -4,12 +4,12 @@
 Even if the Development Environment binaries still exist, they are currently being converted into Hur
 ```
 
-Please refer to [Hurley](https://github.com/worldsibu/hurley)'s homepage for more information.
+Please refer to [Hurley](https://github.com/convectororg/hurley)'s homepage for more information.
 
 ![Hurley Development Environment Manager](media://hurley.svg)
 
 We have a tool to manage your dev environment easily with some commands.
-Once you install [@worldsibu/convector-tool-dev-env](https://www.npmjs.com/package/@worldsibu/convector-tool-dev-env) you will have the folowwing commands available in your `.bin` folder inside the `node_modules`:
+Once you install [@convector/convector-tool-dev-env](https://www.npmjs.com/package/@convector/convector-tool-dev-env) you will have the folowwing commands available in your `.bin` folder inside the `node_modules`:
 
 - `dev-env-start` - Start the docker containers
 - `dev-env-stop` - Stop the docker containers
@@ -67,11 +67,11 @@ To make it easier to manage those commands for your specific project, you can in
 ```json
 {
   "scripts": {
-    "env:init": "./node_modules/@worldsibu/convector-tool-dev-env/scripts/init.sh",
-    "env:start": "./node_modules/@worldsibu/convector-tool-dev-env/scripts/start.sh",
-    "env:stop": "./node_modules/@worldsibu/convector-tool-dev-env/scripts/stop.sh",
-    "env:restart": "./node_modules/@worldsibu/convector-tool-dev-env/scripts/restart.sh",
-    "env:clean": "./node_modules/@worldsibu/convector-tool-dev-env/scripts/clean.sh"
+    "env:init": "./node_modules/@convector/convector-tool-dev-env/scripts/init.sh",
+    "env:start": "./node_modules/@convector/convector-tool-dev-env/scripts/start.sh",
+    "env:stop": "./node_modules/@convector/convector-tool-dev-env/scripts/stop.sh",
+    "env:restart": "./node_modules/@convector/convector-tool-dev-env/scripts/restart.sh",
+    "env:clean": "./node_modules/@convector/convector-tool-dev-env/scripts/clean.sh"
   }
 }
 ```
@@ -79,5 +79,5 @@ To make it easier to manage those commands for your specific project, you can in
 **Prerequisites**
 
 ```bash
-npm install -D @worldsibu/convector-{adapter-mock,tool-{dev-env,chaincode-manager}} fabric-client@1.1.2 fabric-ca-client@1.1.2
+npm install -D @convector/convector-{adapter-mock,tool-{dev-env,chaincode-manager}} fabric-client@1.1.2 fabric-ca-client@1.1.2
 ```
